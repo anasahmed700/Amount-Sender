@@ -7,14 +7,17 @@
     android:background="@android:color/black"
     tools:context=".MainActivity">
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="68dp"
+        android:layout_height="73dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="55dp"
         android:background="@android:color/background_dark"
         android:orientation="horizontal">
 
@@ -30,8 +33,8 @@
             android:id="@+id/tv_update"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#FFFFFF"
             android:text="20000"
+            android:textColor="#FFFFFF"
             android:textSize="24sp" />
 
     </LinearLayout>
@@ -39,10 +42,10 @@
     <LinearLayout
         android:id="@+id/grav"
         android:layout_width="match_parent"
-        android:layout_height="72dp"
+        android:layout_height="50dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="67dp"
+        android:layout_marginTop="125dp"
         android:layout_marginEnd="0dp"
         android:background="@android:color/background_dark"
         android:gravity="bottom"
@@ -68,7 +71,7 @@
 
         android:layout_alignParentTop="true"
         android:layout_marginStart="2dp"
-        android:layout_marginTop="137dp"
+        android:layout_marginTop="181dp"
         android:text="7"
         android:textColor="#FFFFFF"
         android:textSize="30sp" />
@@ -82,7 +85,7 @@
 
         android:layout_alignParentTop="true"
         android:layout_marginStart="130dp"
-        android:layout_marginTop="137dp"
+        android:layout_marginTop="181dp"
         android:text="8"
         android:textColor="#FFFFFF"
         android:textSize="30sp" />
@@ -96,7 +99,7 @@
 
         android:layout_alignParentTop="true"
         android:layout_marginStart="257dp"
-        android:layout_marginTop="137dp"
+        android:layout_marginTop="181dp"
         android:text="9"
         android:textColor="#FFFFFF"
         android:textSize="30sp" />
@@ -110,7 +113,7 @@
 
         android:layout_alignParentTop="true"
         android:layout_marginStart="2dp"
-        android:layout_marginTop="210dp"
+        android:layout_marginTop="250dp"
         android:text="4"
         android:textColor="#FFFFFF"
         android:textSize="30sp" />
@@ -124,7 +127,7 @@
 
         android:layout_alignParentTop="true"
         android:layout_marginStart="130dp"
-        android:layout_marginTop="210dp"
+        android:layout_marginTop="252dp"
         android:text="5"
         android:textColor="#FFFFFF"
         android:textSize="30sp" />
@@ -138,9 +141,9 @@
 
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="257dp"
-        android:layout_marginTop="210dp"
-        android:layout_marginEnd="2dp"
+        android:layout_marginStart="258dp"
+        android:layout_marginTop="252dp"
+        android:layout_marginEnd="1dp"
         android:text="6"
         android:textColor="#FFFFFF"
         android:textSize="30sp" />
@@ -154,7 +157,7 @@
 
         android:layout_alignParentTop="true"
         android:layout_marginStart="2dp"
-        android:layout_marginTop="286dp"
+        android:layout_marginTop="318dp"
         android:text="1"
         android:textColor="#FFFFFF"
         android:textSize="30sp" />
@@ -168,7 +171,7 @@
 
         android:layout_alignParentTop="true"
         android:layout_marginStart="130dp"
-        android:layout_marginTop="285dp"
+        android:layout_marginTop="317dp"
         android:text="2"
         android:textColor="#FFFFFF"
         android:textSize="30sp" />
@@ -183,7 +186,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="257dp"
-        android:layout_marginTop="285dp"
+        android:layout_marginTop="317dp"
         android:layout_marginEnd="2dp"
         android:text="3"
         android:textColor="#FFFFFF"
@@ -198,7 +201,7 @@
 
         android:layout_alignParentTop="true"
         android:layout_marginStart="3dp"
-        android:layout_marginTop="359dp"
+        android:layout_marginTop="388dp"
         android:text="clear"
         android:textColor="#FFFFFF"
         android:textSize="30sp" />
@@ -212,24 +215,8 @@
 
         android:layout_alignParentTop="true"
         android:layout_marginStart="130dp"
-        android:layout_marginTop="359dp"
+        android:layout_marginTop="388dp"
         android:text="0"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp" />
-
-    <Button
-        android:id="@+id/btndot"
-
-        android:layout_width="125dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="257dp"
-        android:layout_marginTop="360dp"
-        android:layout_marginEnd="2dp"
-        android:text="."
         android:textColor="#FFFFFF"
         android:textSize="30sp" />
 
@@ -237,17 +224,28 @@
         android:id="@+id/btn_send"
 
         android:layout_width="match_parent"
-        android:layout_height="72dp"
-        android:layout_below="@+id/btn0"
+        android:layout_height="54dp"
 
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="0dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="5dp"
+        android:background="@android:color/holo_green_dark"
         android:text="send"
         android:textColor="#FFFFFF"
         android:textSize="30sp" />
+
+    <ImageButton
+        android:id="@+id/navigator"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="0dp"
+        android:background="@color/colorPrimary"
+        app:srcCompat="@drawable/ic_navigation"
+        android:onClick="showSummary"/>
 </RelativeLayout>

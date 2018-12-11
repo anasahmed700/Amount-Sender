@@ -1,11 +1,21 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppMaterialTheme" parent="SuperMaterialTheme">
+
+    </style>
+
+    <style name="SuperMaterialTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        
+        <item name="colorControlHighlight">#cde209</item>
+        <item name="colorButtonNormal">#156491</item>
+        <item name="colorControlActivated">#08d215</item>
+        <item name="colorBackgroundFloating">#26befa</item>
+        <item name="colorError">#de0d09</item>
     </style>
 
 </resources>
