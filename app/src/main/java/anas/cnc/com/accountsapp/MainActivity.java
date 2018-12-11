@@ -13,10 +13,10 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private Button zero, one, two, three, four, five, six, seven, eight, nine, point, clear, send;
-    private TextView input, update;
+    private TextView input, update, sent;
 
     private int val1 = 0, val2;
-    private int total = 20000;
+    private int total = 20000, send_amount;
 
 
     @Override
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         }else {
             //Implement this feature without material design
         }
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar myToolbar = findViewById(R.id.toolbar);
         myToolbar.setTitle("Amount Sender");
         myToolbar.setSubtitle("by CNC");
         myToolbar.setNavigationIcon(R.drawable.ic_navigation);
@@ -240,28 +240,33 @@ public class MainActivity extends AppCompatActivity {
         send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                send_amount = Integer.parseInt(input.getText().toString());
+                sent.setText(String.valueOf(send_amount));
+                setTotal(total - send_amount);
+                update.setText(String.valueOf(getTotal()));
+                input.setText("");
             }
         });
     }
 
     private void setupUIViews() {
-        zero = (Button) findViewById(R.id.btn0);
-        one = (Button) findViewById(R.id.btn1);
-        two = (Button) findViewById(R.id.btn2);
-        three = (Button) findViewById(R.id.btn3);
-        four = (Button) findViewById(R.id.btn4);
-        five = (Button) findViewById(R.id.btn5);
-        six = (Button) findViewById(R.id.btn6);
-        seven = (Button) findViewById(R.id.btn7);
-        eight = (Button) findViewById(R.id.btn8);
-        nine = (Button) findViewById(R.id.btn9);
-//        point = (Button) findViewById(R.id.btndot);
-        clear = (Button) findViewById(R.id.btnclr);
-        send = (Button) findViewById(R.id.btn_send);
-        input = (TextView) findViewById(R.id.tv_input);
-        update = (TextView) findViewById(R.id.tv_update);
-        send = (Button)findViewById(R.id.btn_send);
+        zero = findViewById(R.id.btn0);
+        one = findViewById(R.id.btn1);
+        two = findViewById(R.id.btn2);
+        three = findViewById(R.id.btn3);
+        four = findViewById(R.id.btn4);
+        five = findViewById(R.id.btn5);
+        six = findViewById(R.id.btn6);
+        seven = findViewById(R.id.btn7);
+        eight = findViewById(R.id.btn8);
+        nine = findViewById(R.id.btn9);
+//        point = findViewById(R.id.btndot);
+        clear = findViewById(R.id.btnclr);
+        send = findViewById(R.id.btn_send);
+        input = findViewById(R.id.tv_input);
+        update = findViewById(R.id.tv_update);
+        send = findViewById(R.id.btn_send);
+        sent = findViewById(R.id.sent);
     }
 
     private void compute_sub() {

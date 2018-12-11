@@ -9,7 +9,8 @@
     tools:context=".Activity2">
 
     <ListView
-        android:layout_width="385dp"
+        android:id="@+id/list"
+        android:layout_width="match_parent"
         android:layout_height="415dp"
         android:layout_marginTop="33dp"
         android:background="@android:color/background_light"
