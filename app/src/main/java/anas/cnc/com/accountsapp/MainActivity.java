@@ -237,6 +237,12 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        send.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 
     private void setupUIViews() {
@@ -255,6 +261,7 @@ public class MainActivity extends AppCompatActivity {
         send = (Button) findViewById(R.id.btn_send);
         input = (TextView) findViewById(R.id.tv_input);
         update = (TextView) findViewById(R.id.tv_update);
+        send = (Button)findViewById(R.id.btn_send);
     }
 
     private void compute_sub() {
@@ -264,7 +271,7 @@ public class MainActivity extends AppCompatActivity {
         if (val2 >= val1) {
             val2 = val2 - val1;
             update.setText(String.valueOf(val2));
-            setVal2(val2);
+//            setTotal(Integer.parseInt(update.getText().toString()));
         } else {
             val1 = Integer.parseInt(input.getText().toString());
         }
@@ -277,7 +284,7 @@ public class MainActivity extends AppCompatActivity {
         if (val1 <= val2) {
             val2 = val2 + val1;
             update.setText(String.valueOf(val2));
-            setVal2(val2);
+//            setTotal(Integer.parseInt(update.getText().toString()));
         } else {
             val1 = Integer.parseInt(input.getText().toString());
         }

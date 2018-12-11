@@ -20,7 +20,7 @@ public class Activity2 extends AppCompatActivity {
     }
 
     private void setupUIViews(){
-        String balanceString = "Rs." + ma.getVal2();
+        String balanceString = "Rs." + ma.getTotal();
         balance = (TextView)findViewById(R.id.balance);
         balance.setText(balanceString);
     }
